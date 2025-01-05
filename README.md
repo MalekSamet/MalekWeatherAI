@@ -4,7 +4,7 @@
 This work aims for augmenting a dataset (SANPO) in terms of weather conditions and e-scooters. It provides training, inference and evaluation of the whole work.
 
 ## Overview
-This repository serves as a guide to effectively use and manage a suite of interconnected projects. Each project focuses on a specific aspect of the workflow, and this document provides clear instructions for setup, usage, and integration.
+This repository serves as a guide to effectively use and manage a suite of interconnected projects. Each project focuses on a specific aspect of the workflow, and this document provides clear instructions for setup, usage, and integration. All this repos must be in the same ROOT DIRECTORY!
 
 ---
 
