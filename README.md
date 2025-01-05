@@ -35,7 +35,6 @@ This repository consists of the following submodules, each with its correspondin
    - Conda Environment: `environment_oneformer.yml`
 
 5. **[repo5]https://github.com/MalekSamet/SegmentationModel_Thesis.git** 
-   - Conda Environment: `env_repo5`
 
 ---
 
