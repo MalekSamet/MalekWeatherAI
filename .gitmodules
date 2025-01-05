@@ -1,0 +1,6 @@
+[submodule "ALDM_Thesis"]
+	path = ALDM_Thesis
+	url = git@github.com:MalekSamet/ALDM_Thesis.git
+[submodule "BLIP_Thesis"]
+	path = BLIP_Thesis
+	url = git@github.com:MalekSamet/BLIP_Thesis.git
