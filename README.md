@@ -70,6 +70,8 @@ dataset │ ├── sanpo │ ├── images │ ├── train │ └─�
 **SANPO Edit (3 extra classes for snow, bench & billboard):**
 dataset │ ├── sanpo │ ├── images │ ├── train │ └── val │ └── processed_annotations ├── train └── val
 
+Images are named image_idx.png and annotations are named labelIds_image_idx.png
+
 To train the model:
 ```cd ADLM_Laajim
 python train_ALDM.py  --sanpo_mode original --call_BLIP true
@@ -142,4 +144,34 @@ You can find the model weights in: (best ckpt must be pasted under /pretrained_m
 	
 	
 ### 6. Segmentation Model for Evaluation
+First, install the required packages:
+```pip install -r requirements.txt
+```
+The dataset should have the following structure:
+sanpo │ ├── images │ ├── train │ └── val └── test │ └── annotations ├── train └── val └── test
+
+Images are named image_idx.png and annotations are named labelIds_image_idx.png
+
+- Copy the scripts sanpo.py and sanpo_scooter.py to your virtual environment under :/venv/lib/python3.10/site-packages/torchvision/datasets. These datasets will be defined as torchvision datasets. 
+- Import the 2 classes from the pasted files in /venv/lib/python3.10/site-packages/torchvision/datasets/init.py.
+
+**1. Train segmentation model**
+A necessary step before starting training, is cropping the SANPO dataset vertically by 10 pixels. Run the script crop_sanpo_dataset.py by specifying the sanpo_dataset_path variable.
+
+To train the the segmentation model, run the following script:
+	- Exp 1 (please see the paper): lunch_sanpo_exp1.py
+	- Exp 2 (please see the paper): lunch_sanpo_exp2.py
+	- Exp scooter (please see the paper): lunch_sanpo_exp_scooter.py
+	
+**2. Evaluate segmentation model**
+For evaluation of the test set, run the script evaluate_on_test_set.py
+```
+cd SegmentationModel_Thesis
+python evaluate_on_test_set.py --prediction_dir path/to/pred/labels --ground_truth_dir path/to/gt/labels --num_classes 32 --output_file output_results.txt
+```
+
+
+
+
+
 	
