@@ -68,8 +68,8 @@ Before starting the training, ensure that the dataset has the following structur
 datasets.<br>
 ├── cityscapes<br>
 │   ├── gtFine<br>
-│       ├── train<br> 
-│       └── val<br> 
+│      		├── train<br> 
+│       	└── val<br> 
 │   └── leftImg8bit<br>
 │       ├── train <br>
 │       └── val <br>
