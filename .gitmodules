@@ -4,3 +4,12 @@
 [submodule "BLIP_Thesis"]
 	path = BLIP_Thesis
 	url = git@github.com:MalekSamet/BLIP_Thesis.git
+[submodule "InpaintAnything_Thesis"]
+	path = InpaintAnything_Thesis
+	url = git@github.com:MalekSamet/InpaintAnything_Thesis.git
+[submodule "OneFormer_Thesis"]
+	path = OneFormer_Thesis
+	url = git@github.com:MalekSamet/OneFormer_Thesis.git
+[submodule "SegmentationModel_Thesis"]
+	path = SegmentationModel_Thesis
+	url = git@github.com:MalekSamet/SegmentationModel_Thesis.git
