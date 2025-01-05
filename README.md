@@ -22,19 +22,19 @@ This repository enables users to perform the following tasks:
 ## Submodules and Conda Environments
 This repository consists of the following submodules, each with its corresponding Conda environment (All environments are in the folder "/environment" and they have also copies in their corresponding repositories):
 
-1. **[repo1]https://github.com/MalekSamet/ADLM-Laajim.git** 
+1. **[repo1]https://github.com/MalekSamet/ALDM_Thesis.git** 
    - Conda Environment: `environment_ALDM.yml`
 
-2. **[repo2]https://github.com/MalekSamet/BLIP_laajim.git** 
+2. **[repo2]https://github.com/MalekSamet/BLIP_Thesis.git** 
    - Conda Environment: `environment_ALDM.yml`
 
-3. **[repo3]https://github.com/MalekSamet/malek_inpainting.git)** 
+3. **[repo3]https://github.com/MalekSamet/InpaintAnything_Thesis.git** 
    - Conda Environment: `environment_inpaint.yml`
 
-4. **[repo4]https://github.com/MalekSamet/einformer_laajim.git** 
+4. **[repo4]https://github.com/MalekSamet/OneFormer_Thesis.git** 
    - Conda Environment: `environment_oneformer.yml`
 
-5. **[repo5](https://github.com/your-username/repo5)** 
+5. **[repo5]https://github.com/MalekSamet/SegmentationModel_Thesis.git** 
    - Conda Environment: `env_repo5`
 
 ---
@@ -44,13 +44,13 @@ To get started, clone this repository along with its submodules:
 For HTTPS:
 
 ```bash
-git clone --recurse-submodules https://github.com/MalekSamet/MalekThesis.git
+git clone --recurse-submodules https://github.com/MalekSamet/ThesisProject.git
 cd MalekThesis
 ```
 For SSH:
 
 ```bash
-git clone --recurse-submodules git@github.com:MalekSamet/MalekThesis.git
+git clone --recurse-submodules git@github.com:MalekSamet/ThesisProject.git
 cd MalekThesis
 ```
 
@@ -59,7 +59,7 @@ cd MalekThesis
 
 First, we need environment_ALDM.yml:
 ```bash
-cd ADLM_Laajim
+cd ALDM_Thesis
 conda env create -f environment_ALDM.yml
 conda activate ALDM
 ```
@@ -89,7 +89,7 @@ You can find corresponding encoders, decoders and weight initialization: (Paste 
 	/home/malek_ma/Desktop/ROOT_FOLDER/ALDM/pretrained/resnet101-imagenet.pth
 
 ### 2.Inference ALDM on SANPO
-```cd ADLM_Laajim
+```cd ALDM_Thesis
 python inference_sanpo.py  --sanpo_mode original --inference_mode manual --checkpoint /path/to/model/weigths --save_dir /path/dir/to/save/outputs --folder_path /path/input/images/dir
 ```
 - argument sanpo_mode: 'original' and 'edit' as explained in the previous section. It could be also 'cs', to run a pre-trained cityscapes model, and maps the sanpo input to cityscapes.
@@ -103,12 +103,12 @@ You can find corresponding model weights: (for original sanpo, paste under /chec
 
 ### 3.Run Image Captioning with BLIP
 Generates a dict of image captions in a json file
-```cd BLIP
+```cd BLIP_Thesis
 python run_BLIP.py --image_folder /path/to/images/dir --output_json_path /path/output/json
 ```
 ### 4.SANPO dataset re-annotation
 ```
-cd einformer_laajim
+cd OneFormer_Thesis
 python sanpo_edit_mask_processing.py --images_dir /path/to/images/ --mask_dir /path/to/annotations --output_dir /path/to/output/directory --model_weights /path/to/model/weights
 ```
 
@@ -117,7 +117,7 @@ You can find the model weights:
 ### 5.Inference Inpaint_Anything
 First, create and activate the environment:
 ```
-cd malek_inpainting
+cd InpaintAnything_Thesis
 conda env create -f environment_inpaint.yml
 conda activate inpaint
 ```
@@ -128,14 +128,18 @@ The e-scooter insertion is performed on 3 steps:
 
 To insert e-scooter on an image, run this script:
 ```
-cd malek_inpainting
+cd InpaintAnything_Thesis
 python inference_image.py --input_image /path/to/image/ --text_prompt prompt_of_object_to_insert --output_dir /path/to/output/directory --sam_ckpt /path/to/model/weigths --rectangle_width 0.65 --rectangle_height 1
 ```
 To run the insertion for several images in a directory, run this script:
 ```
-cd malek_inpainting
+cd InpaintAnything_Thesis
 python inference_folder.py --input_dir /path/to/images/directory --text_prompt prompt_of_object_to_insert --output_dir /path/to/output/directory --sam_ckpt /path/to/model/weigths --rectangle_width 0.65 --rectangle_height 1
 ```
 You can find the model weights in: (best ckpt must be pasted under /pretrained_models/big-lama/models)
 	/home/malek_ma/Desktop/ROOT_FOLDER/Inpaint-Anything/pretrained_models/sam_vit_h_4b8939.pth
 	/home/malek_ma/Desktop/ROOT_FOLDER/Inpaint-Anything/pretrained_models/big-lama/models/best.ckpt
+	
+	
+### 6. Segmentation Model for Evaluation
+	
