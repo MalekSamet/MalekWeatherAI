@@ -65,14 +65,14 @@ conda activate ALDM
 Before starting the training, ensure that the dataset has the following structure in the folder dataset/:
 **SANPO Original:**
 
-datasets
-├── cityscapes
-│   ├── gtFine
-│       ├── train 
-│       └── val 
-│   └── leftImg8bit
-│       ├── train 
-│       └── val 
+datasets.<br>
+├── cityscapes<br>
+│   ├── gtFine<br>
+│       ├── train<br> 
+│       └── val<br> 
+│   └── leftImg8bit<br>
+│       ├── train <br>
+│       └── val <br>
 
 │ dataset 
 │ ─────── │ sanpo
