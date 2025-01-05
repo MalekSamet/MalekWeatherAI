@@ -66,22 +66,28 @@ Before starting the training, ensure that the dataset has the following structur
 **SANPO Original:**
 
 ```plaintext
-datasets
-├── cityscapes
-│   ├── gtFine
+dataset
+├── sanpo
+│   ├── annotations
 │   │   ├── train 
 │   │   └── val 
-│   └── leftImg8bit
+│   └── images
 │       ├── train 
 │       └── val
 ```
 
-│ dataset 
-│ ─────── │ sanpo
-│ ──────────────── images │ ├── train │ └── val │ └── annotations ├── train └── val
 
 **SANPO Edit (3 extra classes for snow, bench & billboard):**
-dataset │ ├── sanpo │ ├── images │ ├── train │ └── val │ └── processed_annotations ├── train └── val
+```plaintext
+dataset
+├── sanpo
+│   ├── processed annotations
+│   │   ├── train 
+│   │   └── val 
+│   └── images
+│       ├── train 
+│       └── val
+```
 
 Images are named image_idx.png and annotations are named labelIds_image_idx.png
 
@@ -161,7 +167,18 @@ First, install the required packages:
 ```pip install -r requirements.txt
 ```
 The dataset should have the following structure:
-sanpo │ ├── images │ ├── train │ └── val └── test │ └── annotations ├── train └── val └── test
+```plaintext
+dataset
+├── sanpo
+│   ├── annotations
+    │   ├── test 
+│   │   ├── train 
+│   │   └── val 
+│   └── images
+    │   ├── test 
+│   │   ├── train 
+│   │   └── val 
+```
 
 Images are named image_idx.png and annotations are named labelIds_image_idx.png
 
