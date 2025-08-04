@@ -1,7 +1,16 @@
-# Thesis Repository 
+# Weather transofrmations in urban scenes while preserving layout and labels & Objects insertion (E-Scooters)
 
 ## Contribution
-This work aims for augmenting a dataset (SANPO) in terms of weather conditions and e-scooters. It provides training, inference and evaluation of the whole work.
+This work aims for augmenting a dataset (in this case SANPO dataset "cou could use your own dataset") in terms of weather conditions and e-scooters. It provides training, inference and evaluation of the whole work.
+
+### Weather transofrmation with layout and label preservation
+
+![Alt text](Images_transformations.PNG)
+
+### Object insertion (E-Scooters)
+
+![Alt text](Scooter_1.PNG)
+![Alt text](Scooter_2.PNG)
 
 ## Overview
 This repository serves as a guide to effectively use and manage a suite of interconnected projects. Each project focuses on a specific aspect of the workflow, and this document provides clear instructions for setup, usage, and integration. All this repos must be in the same ROOT DIRECTORY!
