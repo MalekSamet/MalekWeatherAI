@@ -213,17 +213,18 @@ python evaluate_on_test_set.py --prediction_dir path/to/pred/labels --ground_tru
 
 ### 📚 References
 
-This repository makes use of the following project:
+This repository makes use of the following projects:
 
 - [**ALDM** – Adversarial Supervision Makes Layout-to-Image Diffusion Models Thrive](https://github.com/boschresearch/ALDM)  
-   Licensed under AGPL-3.0 license 
-  ```bibtex
-  @inproceedings{li2024aldm,
-    title={Adversarial Supervision Makes Layout-to-Image Diffusion Models Thrive},
-    author={Li, Yumeng and Keuper, Margret and Zhang, Dan and Khoreva, Anna},
-    booktitle={The Twelfth International Conference on Learning Representations},
-    year={2024}
-  }```
+   Licensed under AGPL-3.0 license
+- [BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation](https://github.com/salesforce/BLIP)
+   Licensed under BSD-3-Clause license
+- [Inpaint Anything: Segment Anything Meets Image Inpainting](https://github.com/geekyutao/Inpaint-Anything)
+   Licensed under Apache-2.0 license
+- [OneFormer: One Transformer to Rule Universal Image Segmentation](https://github.com/SHI-Labs/OneFormer)
+   Licensed under MIT
+- [Semantic Segmentation Cityscapes](https://github.com/massimilianoviola/semantic-segmentation-cityscapes)
+   Licensed under MIT
 
 
 
