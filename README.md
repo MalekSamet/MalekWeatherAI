@@ -209,9 +209,7 @@ cd SegmentationModel_Thesis
 python evaluate_on_test_set.py --prediction_dir path/to/pred/labels --ground_truth_dir path/to/gt/labels --num_classes 32 --output_file output_results.txt
 ```
 
-## References
-
-### 📚 References
+## 📚 References
 
 This repository makes use of the following projects:
 
