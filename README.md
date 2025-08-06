@@ -209,6 +209,14 @@ cd SegmentationModel_Thesis
 python evaluate_on_test_set.py --prediction_dir path/to/pred/labels --ground_truth_dir path/to/gt/labels --num_classes 32 --output_file output_results.txt
 ```
 
+## References
+
+@inproceedings{li2024aldm,
+  title={Adversarial Supervision Makes Layout-to-Image Diffusion Models Thrive},
+  author={Li, Yumeng and Keuper, Margret and Zhang, Dan and Khoreva, Anna},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
 
 
 
